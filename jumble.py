@@ -30,4 +30,10 @@ def main(argv):
 
 
 if __name__ == "__main__":
-    main(sys.argv[1])
+    if len(sys.argv) < 2:
+        print 'ERROR: no argument string'
+        print 'USAGE: python jumble.py <string to unjumble>'
+    else: 
+        if len(sys.argv) > 2:
+            print 'WARNING: too many arguments. only first argument string unjumbled'
+        main(sys.argv[1])
